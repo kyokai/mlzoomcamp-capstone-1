@@ -1,0 +1,12 @@
+service: "service.py:svc"
+labels:
+  owner: tom
+  project: mlzoomcamp-capstone
+include: 
+- "*.py"
+python:
+  packages:
+  - xgboost
+  - scikit-learn
+  - pydantic
+  - pandas
