@@ -34,9 +34,9 @@ The data was accessed via kaggle, <a source='https://www.kaggle.com/datasets/mat
 ### Serverless hosting
 The model has been deployed as an AWS Lambda function using BentoCTL and can be accessed and tested via this url https://55o8hy6s63.execute-api.ap-southeast-2.amazonaws.com/#/Service%20APIs/diabetes_risk_classifier__classify
 
-Steps taken to host serverless (Assumes you have installed bentoctl, terraform and aws-cli):
+Steps taken to host serverless (Assumes you have installed bentoctl, terraform and aws-cli installed):
 1. In the project directory, run ```bentoml build```
-2. Change into deployment directory ```cd deployment```
+2. Change into deployment directory ```mkdir deploymnet && cd deployment```
 3. Run ```bentoctl build -b diabetes_risk_classifier:latest -f deployment_config.yaml```
 4. Run ```terraform init```
 5. Run ```terraform apply -var-file=bentoctl.tfvars -auto-approve```
